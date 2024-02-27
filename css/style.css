@@ -1,182 +1,153 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #111; /* Warna latar belakang gelap */
+  color: #fff; /* Warna teks putih */
+  background-image: url('/img/gambar1.jpg');
+  margin-top: 60px;
 }
-/*navbar*/
+
+header {
+  position: fixed; /* Navbar menjadi lengket */
+  top: 0; /* Menempatkan navbar di bagian atas */
+  width: 100%; /* Navbar mengambil lebar penuh */
+  background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+  padding: 20px 0;
+  z-index: 1000; /* Menempatkan navbar di atas konten lain */
+}
+
+
 nav {
   display: flex;
-  background-color: coral;
-  justify-content: space-around;
-  /* padding: 20px 0; atas bawah 20  kiri kanan 0 */
-  /* atur padding dengan flex */
-  height: 45px;
-  align-items: center;
-  color: whitesmoke;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  width: 40%;
   justify-content: space-between;
-  transition: all 0.4s;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-nav .logo {
-  font-family: "Srisakdi", cursive;
-  letter-spacing: 3px; /*space antar char*/
+
+.logo h4 {
+  color: #fff; /* Warna teks logo putih */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
+    padding: 9px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: teal;
+  color: #1e1d1d; /* Warna teks link sedikit lebih terang saat dihover */
+  background-color: #ebe5e5;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
 }
-  /* hamburger menu */
-  .menu-toggle{
-    display: none; 
-    flex-direction: column;
-    height: 17px;
-    justify-content: space-between;
-    position: relative;
- }
- .menu-toggle input{
-     position: absolute;
-     top:-5px;
-     left:-3px;
-     width:21px;
-     height: 21px;
-     opacity: 0;
-     cursor: pointer;
-     z-index: 2;
- }
- .menu-toggle span{
-     display: block;
-     width: 21px;
-     height: 2px;
-     background-color: whitesmoke;
-     border-radius: 3px;
-     transition: all 0.7s;
- }
 
-   /*x on hamburger menu*/
-   .menu-toggle span:nth-child(2){
-    transform-origin: left center;
-  }
-  
-  .menu-toggle span:nth-child(4){
-    transform-origin: left center;
-  }
-  
-  .menu-toggle input:checked ~ span:nth-child(2){
-    transform: rotate(45deg) ;
-  }
-  
-  .menu-toggle input:checked ~ span:nth-child(4){
-    transform: rotate(-45deg) ;
-  }
-  /* invis span ke 2 / child ke 3 */
-  .menu-toggle input:checked ~ span:nth-child(3){
-    width: 0%;
-    opacity: 0;
-    transition: .1s
-  }
-
-  .image {
-   
-    width: 100%;
-    height: auto;  
-    max-width: 140px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.menu-toggle {
+  display: none;
 }
+
+.menu-container .isi {
+  margin-left: 40px;
+  color: white;
+}
+
+.menu-container .isi li a {
+  color: white;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  -moz-transition: color 0.3s ease, background-color 0.3s ease;
+  -ms-transition: color 0.3s ease, background-color 0.3s ease;
+  -o-transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-container .isi li a:hover {
+  color: rgba(54, 58, 109, 0.703);
+}
+
 
 .container {
-    display: flex;
-    flex-direction: column;
-
-    border: 2px solid blue;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 0 auto;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
 main {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 
 .box {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-}
-/* supaya ada jarak antar box  */
-.flexone{
-flex-grow: 1;
-}
-.flextwo{
-    flex-grow: 2;
-    }
-footer {
-    text-align: center;
-}
-h2 {
+  padding: 20px;
+  background-color: rgba(17, 18, 48, 0.721); /* Warna latar belakang box dengan transparansi */
+  border-radius: 10px;
+  margin-bottom: 20px;
   
-    text-align: center;
-    color: brown;
-    text-justify: inter-word;
-    word-wrap: break-word;
-
 }
-h5 {
-  text-align: center;
-  color: red;
-  word-wrap: break-word;
- 
-}
-p {
-    text-align: justify;
-    text-justify: inter-word;
-}
-@media screen and (max-width: 768px) {
-    nav ul{
-      width: 50%;
-    }
-  }
 
-  @media screen and (max-width: 576px) {
-   .menu-toggle{
-       display: flex;
-   }
-   main{
-       flex-direction: column-reverse;
-   }
-    nav ul{
-      position: absolute;
-      right:0;
-      top: 0;
-      width: 50%;
-      flex-direction: column;
-      height: 100vh;
-      justify-content:space-evenly;
-      align-items: center;
-      background-color: coral;
-      /* transform: translateX(100%);  */
-      transition: all 0.72s;
-      opacity: 0;
-      z-index: 2;
-    }
-    nav ul.menushow{
-        opacity: 0.5;
-        /* transform: translateX(0); */
-    }
-  }
+.box h2,
+.box h5 {
+  color: #fff; /* Warna teks heading putih */
+}
 
+.image {
+  width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  border-radius: 50%; /* Memastikan gambar menjadi lingkaran */
+  margin-bottom: 10px;
+  box-shadow: #111;
+}
+
+footer2 {
+  background-color: black; /* Warna latar belakang hitam */
+  color: white; /* Warna teks putih */
+  text-align: center; /* Teks di tengah */
+  padding: 20px 0; /* Padding atas dan bawah 20px, padding samping 0 */
+}
+
+.container2 {
+  max-width: 800px; /* Lebar maksimum konten */
+  margin: 0 auto; /* Atur ke tengah */
+}
+
+.container3 {
+  /* display: flex; */
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row img {
+  background-color: #564b7c60;
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

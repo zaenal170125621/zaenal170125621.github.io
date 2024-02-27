@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/masuk2/css/subjek.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h4>ZM</h4>
+            </div>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/masuk2/subjek.html">Kalkulator</a></li>
+                <li><a href="/masuk2/files.html">Galeri</a></li>
+                <li><a href="/masuk2/assignment.html">Map</a></li>
+                <li><a href="/masuk2/about.html">About</a></li>
+                <li><a href="/index.html">Kembali</a></li>
+            </ul>
+        </nav>
+    </header><br><br>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <br>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="*" onclick="addToDisplay('*')">
+        <br>
+        <input type="button" value="C" onclick="clearDisplay()">
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+    </div>
+
+    <script>
+        // Fungsi untuk menambahkan karakter ke layar kalkulator
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        // Fungsi untuk membersihkan layar kalkulator
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        // Fungsi untuk menghitung ekspresi matematika yang ditampilkan di layar kalkulator
+        function calculate() {
+            try {
+                // Menggunakan fungsi eval untuk mengevaluasi ekspresi matematika yang ditampilkan
+                var result = eval(document.getElementById('display').value);
+                // Menampilkan hasil perhitungan di layar
+                document.getElementById('display').value = result;
+            } catch (error) {
+                // Menangani kesalahan jika ekspresi tidak valid
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

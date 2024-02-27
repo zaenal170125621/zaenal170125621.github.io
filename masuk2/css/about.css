@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111; /* Warna latar belakang gelap */
+    color: #fff; /* Warna teks putih */
+    background-image: url('/img/gambar1.jpg');
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 80px;
+}
+
+header {
+    position: fixed; /* Navbar menjadi lengket */
+    top: 0; /* Menempatkan navbar di bagian atas */
+    width: 100%; /* Navbar mengambil lebar penuh */
+    background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+    padding: 20px 0;
+    z-index: 1000; /* Menempatkan navbar di atas konten lain */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+    padding: 9px 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1e1d1d; /* Warna teks link sedikit lebih terang saat dihover */
+  background-color: #ebe5e5;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: #fff;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/gambar1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) grayscale(35%);
+    z-index: -1;
+    -webkit-filter: blur(5px) grayscale(50%);
+    justify-content: center;
+}
+
+.container-content {
+    position: relative;
+    z-index: 1; /* Menempatkan konten di depan latar belakang */
+}
+
+h1 {
+    color: #fff;
+}
+p {
+    color: #ccc;
+}
+.profile-image {
+    background-color: #000000;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.container2{
+    padding: 25px;
+    border-radius: 50px;
+    background-color: #1111117d;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
