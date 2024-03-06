@@ -20,54 +20,79 @@ header {
     background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
     padding: 20px 0;
     z-index: 1000; /* Menempatkan navbar di atas konten lain */
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
-    padding: 9px 18px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo h4 {
+    color: #fff; /* Warna teks logo putih */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    margin: 0 2px;
+    padding: 5px 10px;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     text-decoration: none;
     color: #fff;
     transition: color 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #1e1d1d; /* Warna teks link sedikit lebih terang saat dihover */
-  background-color: #ebe5e5;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
-}
-
-body.dark-theme {
-    background-color: #333;
-    color: #fff;
-}
-
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #1e1d1d;
+    background-color: #ebe5e5;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
+  }
+  
+  .home {
+    color: rgb(18, 18, 255);
+    text-size-adjust: bold;
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+  }
+  
+    /* Media query untuk layar kecil */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
+      align-items: center; /* Menyatukan item menu ke tengah */
+      background-color: rgba(34, 34, 34, 0.7); /* Transparansi pada navigasi */
+    }
+  
+    nav ul {
+      margin-top: 10px; 
+    }
+  
+    nav ul li {
+        margin-left: 3px;
+        margin-right: 3px; /* Menghapus margin kanan pada item menu */
+      }
+  }
 .container {
     position: relative;
     max-width: 800px;
     margin: 20px auto;
+    margin-bottom: 100px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -117,3 +142,85 @@ p {
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
 }
+
+footer {
+    background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Menyatukan teks ke tengah */
+    width: 100%; /* Sesuaikan lebar footer sesuai kebutuhan */
+  }
+  
+  .additional-links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .additional-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .additional-links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .additional-links ul li a:hover {
+    color: #89771e;
+    text-decoration: none;
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Pusatkan footer dengan margin otomatis */
+  }
+  
+  .contact-info ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Menyatukan teks ke tengah */
+  }
+  
+  .contact-info ul li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block; /* Mengatur item kontak ke samping */
+    margin-right: 20px; /* Memberikan jarak antar item kontak */
+  }
+  
+  .contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .contact-info ul li a:hover {
+    color: #89771e;
+  }
+  
+  .logokontak {
+    margin-right: 10px;
+    width: 20px; /* Sesuaikan ukuran ikon kontak */
+    height: auto;
+  }
+  
+  .credit {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container2 {
+      flex-direction: column;
+    }
+  }

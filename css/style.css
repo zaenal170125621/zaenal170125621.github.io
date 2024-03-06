@@ -31,10 +31,6 @@ nav {
   padding: 0 20px;
 }
 
-.logo h4 {
-  color: #fff; /* Warna teks logo putih */
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -69,26 +65,26 @@ nav ul li a:hover {
   text-size-adjust: bold;
   text-decoration: underline;
   text-underline-offset: 0.5em;
+
 }
 
-/* Media query untuk layar kecil */
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
-    align-items: center; /* Menyatukan item menu ke tengah */
-    background-color: rgba(34, 34, 34, 0.7); /* Transparansi pada navigasi */
+  /* Media query untuk layar kecil */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
+      align-items: center; /* Menyatukan item menu ke tengah */
+      background-color: rgba(34, 34, 34, 0.7); /* Transparansi pada navigasi */
+    }
+  
+    nav ul {
+      margin-top: 10px; 
+    }
+  
+    nav ul li {
+      margin-left: 3px;
+      margin-right: 3px; /* Menghapus margin kanan pada item menu */
+    }
   }
-
-  nav ul {
-    margin-top: 20px; /* Memberikan jarak antara logo dan menu saat layar kecil */
-  }
-
-  nav ul li {
-    margin-right: 0; /* Menghapus margin kanan pada item menu */
-    margin-bottom: 10px; /* Memberikan jarak antara setiap item menu */
-  }
-}
-
 
 .menu-container .isi {
   margin-left: 40px;
@@ -217,12 +213,14 @@ footer2 {
 }
 
 footer {
-  background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+  position: relative; /* Gunakan posisi tetap */
+  bottom: 0; /* Letakkan di bagian bawah layar */
+  background-color: rgba(34, 34, 34, 1);
   color: #fff;
   padding: 20px;
   font-family: Arial, sans-serif;
-  text-align: center; /* Menyatukan teks ke tengah */
-  width: 100%; /* Sesuaikan lebar footer sesuai kebutuhan */
+  text-align: center;
+  width: 100%;
 }
 
 .additional-links ul {
@@ -276,7 +274,7 @@ footer {
   align-items: center;
 }
 .contact-info ul li a:hover {
-  color: rgba(0, 0, 255, 0.5);
+  color: #89771e;
 }
 
 .logokontak {
