@@ -48,10 +48,10 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
   transition: color 0.3s ease;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -ms-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -69,7 +69,7 @@ nav ul li a:hover {
 }
 
   /* Media query untuk layar kecil */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 630px) {
     nav {
       flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
       align-items: center; /* Menyatukan item menu ke tengah */
