@@ -83,8 +83,8 @@
       }
     
       nav ul li {
-        margin-left: 3px;
-        margin-right: 3px; /* Menghapus margin kanan pada item menu */
+        margin-left: 0px;
+        margin-right: 0px; /* Menghapus margin kanan pada item menu */
       }
     }
 
