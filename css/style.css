@@ -64,6 +64,13 @@ nav ul li a:hover {
   box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
 }
 
+.home {
+  color: rgb(18, 18, 255);
+  text-size-adjust: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+}
+
 /* Media query untuk layar kecil */
 @media screen and (max-width: 768px) {
   nav {
@@ -234,6 +241,11 @@ footer {
   text-decoration: none;
 }
 
+.additional-links ul li a:hover {
+  color: #89771e;
+  text-decoration: none;
+}
+
 .container2 {
   display: flex;
   justify-content: space-between;
@@ -262,6 +274,9 @@ footer {
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+.contact-info ul li a:hover {
+  color: rgba(0, 0, 255, 0.5);
 }
 
 .logokontak {
