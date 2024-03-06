@@ -87,14 +87,140 @@
         margin-right: 0px; /* Menghapus margin kanan pada item menu */
       }
     }
+    
+    #map {
+      width: 100%; /* Mengatur lebar peta agar responsif */
+      max-width: 400px; /* Mengatur lebar maksimum peta */
+      height: 350px;
+      float: left;
+      text-align: center;
+    }
+    
+  
 
-  #map {
-    width: 800px; /* Sesuaikan lebar sesuai kebutuhan */
-    height: 400px;
-    margin: 0 auto; /* Membuat margin otomatis secara horizontal */
+  
+/* CSS untuk desain kontak dan peta yang responsif */
+.contact {
+  margin-bottom: 100px;
+  text-align: center;
 }
 
+.contact h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
 
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 10px;
+}
+
+.contact ul li a {
+  display: inline-block;
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact ul li a:hover {
+  color: #007bff;
+}
+
+.contact ul li img {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.contact-form {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 16px;
+  color: #e4e4e4;
+  margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-form .success-message {
+  color: #28a745;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.contact-form .error-message {
+  color: #dc3545;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #map{
+    text-align: center;
+    float: none;
+
+  }
+
+  .contact{
+    float: none;
+  }
+  .contact ul li {
+    margin-bottom: 5px;
+  }
+
+  .contact ul li a {
+    font-size: 14px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .contact-form textarea {
+    height: 120px;
+  }
+}
 
 footer {
   background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */

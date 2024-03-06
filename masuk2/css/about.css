@@ -80,12 +80,12 @@ header {
     }
   
     nav ul {
-      margin-top: 20px; /* Memberikan jarak antara logo dan menu saat layar kecil */
+      margin-top: 10px; /* Memberikan jarak antara logo dan menu saat layar kecil */
     }
   
     nav ul li {
-      margin-right: 0; /* Menghapus margin kanan pada item menu */
-      margin-bottom: 10px; /* Memberikan jarak antara setiap item menu */
+        margin-right: 0; /* Menghapus margin kanan pada item menu */
+        margin-left: 0;
     }
   }
   
