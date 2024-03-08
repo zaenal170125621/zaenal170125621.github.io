@@ -132,8 +132,8 @@
       
     #map {
       width: 100%; /* Mengatur lebar peta agar responsif */
-      max-width: 400px; /* Mengatur lebar maksimum peta */
-      height: 350px;
+      max-width: 600px; /* Mengatur lebar maksimum peta */
+      height: 350;
       float: left;
       text-align: center;
       margin-left: auto;
@@ -147,13 +147,14 @@
 /* CSS untuk desain kontak dan peta yang responsif */
 .contact {
   margin-bottom: 100px;
-  text-align: center;
+  font-size: larger;
 }
 
 .contact h2 {
   font-size: 24px;
-  color: #333;
+  color: #ff0000;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .contact ul {
@@ -177,7 +178,7 @@
 }
 
 .contact ul li img {
-  width: 30px;
+  width: 50px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -200,9 +201,13 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: 100px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .contact-form textarea {
@@ -214,7 +219,7 @@
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 12px 20px;
+  padding: 16px 28px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -236,6 +241,8 @@
   margin-top: 20px;
 }
 
+
+
 @media screen and (max-width: 768px) {
   #map{
     text-align: center;
@@ -245,6 +252,7 @@
 
   .contact{
     float: none;
+    text-align: center;
   }
   .contact ul li {
     margin-bottom: 5px;
@@ -263,7 +271,7 @@
   }
 
   .contact-form textarea {
-    height: 120px;
+    height: 240px;
   }
 }
 
