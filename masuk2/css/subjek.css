@@ -3,21 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-.calculator {
-    width: 280px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-input[type="button"] {
-    width: 45px;
-    height: 45px;
-    margin: 5px;
-    font-size: 18px;
-}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #111; /* Warna latar belakang gelap */
@@ -144,6 +130,31 @@ nav ul li a:hover {
   }
 }
 
+.calculator {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+input[type="button"] {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#display{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 17.85px;
+  color: #111;
+  text-size-adjust: bold;
+}
   footer {
     background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
     color: #fff;
