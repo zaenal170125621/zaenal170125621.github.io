@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 .menu-container .isi {
-  margin-left: 40px;
+  margin-left: 20px;
   color: white;
 }
 .container {
@@ -177,17 +177,31 @@ h5 {
   }
 }
 
-.menu-container .isi li a {
-  color: white;
+.menu-container .isi li {
+  display: inline;
+}
+
+.menu-container .isi a {
+  text-emphasis: none;
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: #c1c1c1;
+  color: rgb(15, 0, 77);
+  border-radius: 5px;
   transition: color 0.3s ease, background-color 0.3s ease;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   -moz-transition: color 0.3s ease, background-color 0.3s ease;
   -ms-transition: color 0.3s ease, background-color 0.3s ease;
   -o-transition: color 0.3s ease, background-color 0.3s ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .menu-container .isi li a:hover {
-  color: rgba(54, 58, 109, 0.703);
+  color: rgba(198, 198, 198, 0.703);
+  background-color: #1e1d1d;
 }
 
 
@@ -216,11 +230,16 @@ main {
 }
 
 .image {
-  width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  width: 350px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
   height: auto;
   border-radius: 50%; /* Memastikan gambar menjadi lingkaran */
   margin-bottom: 10px;
   box-shadow: #111;
+  transition: transform 0.3s ease-in-out; /* Menambahkan transisi */
+}
+
+.image a:hover{
+  transform: scale(1.1);
 }
 
 footer2 {
@@ -262,6 +281,9 @@ footer2 {
     background-color: #564b7c60;
     width: 150px;
   }
+   .image{
+    width: 250px;
+   }
 }
 
 footer {
