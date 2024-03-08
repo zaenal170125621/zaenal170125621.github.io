@@ -1,136 +1,204 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden; /* Mencegah scrolling horizontal */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Mencegah scrolling horizontal */
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Memastikan gambar latar belakang diatur sesuai */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar latar belakang diatur sesuai */
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Warna gelap semi-transparan */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Warna gelap semi-transparan */
 }
 
 .content {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
 }
 
 .profile-image {
-    width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 50%; /* Memastikan gambar menjadi lingkaran */
-    background-color: #000000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Menambahkan bayangan */
-    transition: transform 0.3s ease-in-out; /* Menambahkan transisi */
+  width: 200px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Memastikan gambar menjadi lingkaran */
+  background-color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Menambahkan bayangan */
+  transition: transform 0.3s ease-in-out; /* Menambahkan transisi */
 }
 
 /* Efek hover */
 .profile-image:hover {
-    transform: scale(1.1); /* Membesarkan gambar saat dihover */
+  transform: scale(1.1); /* Membesarkan gambar saat dihover */
 }
 
-
 .nav-button {
-    background-color: #222; /* Warna latar belakang yang serupa dengan navigasi */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  background-color: #222; /* Warna latar belakang yang serupa dengan navigasi */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .nav-button:hover {
-    background-color: #dcd9d9; /* Warna latar belakang semi-transparan saat dihover */
-    color: #131313;
-    box-shadow: blue;
+  background-color: #dcd9d9; /* Warna latar belakang semi-transparan saat dihover */
+  color: #131313;
+  box-shadow: blue;
 }
 
-/* Contact section */
-#contact {
-    position: absolute;
-    top: 100%; /* Posisi bawah */
-    padding: 10px 0;
-    text-align: center;
-    background-color: #373a51; /* Warna latar belakang untuk bagian kontak */
-    color: #fff;
-    z-index: 1; /* Pastikan kontak tetap di atas latar belakang */
-    width: 90%; /* Lebar yang diinginkan */
-    width: 100%;
-    transition: top 0.5s; /* Efek transisi saat bagian kontak muncul */
-    
+footer {
+  position: relative; /* Gunakan posisi tetap */
+  bottom: 0; /* Letakkan di bagian bawah layar */
+  background-color: rgba(34, 34, 34, 1);
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
 }
 
-#contact.visible {
-    top: 50%; /* Mengembalikan bagian kontak ke posisi normal */
+.additional-links ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
-/* Menghilangkan titik besar pada list */
-#contact ul {
-    list-style: none;
-    padding: 0;
+.additional-links ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.additional-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.additional-links ul li a:hover {
+  color: #89771e;
+  text-decoration: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto; /* Pusatkan footer dengan margin otomatis */
+}
+
+.contact-info ul {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Menyatukan teks ke tengah */
+}
+
+.contact-info ul li {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: inline-block; /* Mengatur item kontak ke samping */
+  margin-right: 20px; /* Memberikan jarak antar item kontak */
+}
+
+.contact-info ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.contact-info ul li a:hover {
+  color: #89771e;
+}
+
+.logokontak {
+  margin-right: 10px;
+  width: 20px; /* Sesuaikan ukuran ikon kontak */
+  height: auto;
+}
+
+.credit {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .container2 {
+    flex-direction: column;
+  }
 }
 
 /* Animasi mengetik */
 .typewriter {
-    color: #fff;
-    font-size: xx-large;
-    font-weight: bold;
-    padding-bottom: 20px;
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
-    -webkit-animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
+  color: #fff;
+  font-size: xx-large;
+  font-weight: bold;
+  padding-bottom: 20px;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
+  -webkit-animation: typing 4s steps(40, end), blink-caret 1s step-end infinite;
 }
 
 /* Animasi mengetik */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: orange;
-    }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/* Responsif ke perangkat mobile */
+@media only screen and (max-width: 768px) {
+  .typewriter {
+    font-size: 20px; /* Ubah ukuran font sesuai kebutuhan */
+    padding-bottom: 10px; /* Sesuaikan padding sesuai kebutuhan */
+  }
 }
