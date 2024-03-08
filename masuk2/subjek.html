@@ -12,7 +12,7 @@
             <div class="logo">
                 <h4>ZM</h4>
             </div>
-            <ul>
+            <ul class="menu" id="menu">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/masuk2/about.html">About</a></li>
                 <li class="home">Project</li>
@@ -20,8 +20,13 @@
                 <li><a href="/masuk2/assignment.html">Contact</a></li>
                 <li><a href="/load.html">Keluar</a></li>
             </ul>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
-    </header><br><br>
+    </header><br>
     <div class="calculator">
         <input type="text" id="display" disabled>
         <br>
@@ -91,5 +96,6 @@
             <p class="credit">&copy; 2024 Zaenal Muttakin</p>
         </div>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 </html>

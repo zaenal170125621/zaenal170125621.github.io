@@ -14,80 +14,122 @@ body {
 }
 
 header {
-    position: fixed; /* Navbar menjadi lengket */
-    top: 0; /* Menempatkan navbar di bagian atas */
-    width: 100%; /* Navbar mengambil lebar penuh */
-    background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
-    padding: 20px 0;
-    z-index: 1000; /* Menempatkan navbar di atas konten lain */
+  position: fixed; /* Navbar menjadi lengket */
+  top: 0; /* Menempatkan navbar di bagian atas */
+  width: 100%; /* Navbar mengambil lebar penuh */
+  background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+  padding: 20px 0;
+  z-index: 1000; /* Menempatkan navbar di atas konten lain */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  margin: 0 2px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.7s ease;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+
+nav ul li a:hover {
+  color: #1e1d1d;
+  background-color: #ebe5e5;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
+}
+
+.home {
+  color: rgb(18, 18, 255);
+  text-size-adjust: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+
+}
+
+/* Your existing styles */
+
+.burger-menu {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1500; /* Ensure burger menu is above the navbar */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #c1c1c1;
+  margin: 5px 0;
+  transition: transform 0.3s ease; /* Add transition for sliding effect */
+}
+
+.navbar-open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+      display: none;
   }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  .burger-menu {
+      display: block;
   }
-  
-  .logo h4 {
-    color: #fff; /* Warna teks logo putih */
+  .menu.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30%;
+      background-color: rgb(20, 20, 20);
+      padding: 70px 15px;
+      z-index: 1000;
+      transition: transform 0.3s ease; /* Add transition for sliding effect */
+      transform: translateX(0); /* Change to 0 to slide from right */
   }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
+  .menu.open ul {
+      flex-direction: column;
   }
-  
-  nav ul li {
-    margin-right: 20px;
+  .menu.open li {
+      margin-bottom: 20px;
   }
-  
-  nav ul li a {
-    margin: 0 2px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all 0.7s ease;
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 0.7s ease;
-    -ms-transition: all 0.7s ease;
-    -o-transition: all 0.7s ease;
+  .menu.open li:last-child {
+      margin-bottom: 0;
   }
-  
-  nav ul li a:hover {
-    color: #1e1d1d;
-    background-color: #ebe5e5;
-    box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
-  }
-  
-  .home {
-    color: rgb(18, 18, 255);
-    text-size-adjust: bold;
-    text-decoration: underline;
-    text-underline-offset: 0.5em;
-  }
-  
-  /* Media query untuk layar kecil */
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
-      align-items: center; /* Menyatukan item menu ke tengah */
-      background-color: rgba(34, 34, 34, 0.7); /* Transparansi pada navigasi */
-    }
-  
-    nav ul {
-      margin-top: 10px; /* Memberikan jarak antara logo dan menu saat layar kecil */
-    }
-  
-    nav ul li {
-        margin-right: 0; /* Menghapus margin kanan pada item menu */
-        margin-left: 0;
-    }
-  }
+}
   
 .container {
     position: relative;
