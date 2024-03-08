@@ -16,7 +16,7 @@
             <div class="logo">
                 <h4>ZM</h4>
             </div>
-            <ul>
+            <ul class="menu" id="menu">
                 <li class="home">Home</li>
                 <li><a href="/masuk2/about.html">About</a></li>
                 <li><a href="/masuk2/subjek.html">Project</a></li>
@@ -24,9 +24,14 @@
                 <li><a href="/masuk2/assignment.html">Contact</a></li>
                 <li><a href="/load.html">Keluar</a></li>
             </ul>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
-    </header><br>
-    <div class="menu-container"><br><br>
+    </header>
+    <div class="menu-container"><br>
         <ul class="isi">
             <li><a href="#programmer-weapons">Programmer Weapons</a></li>
             <li><a href="#lesson-learned">Lesson Learned</a></li>
@@ -51,14 +56,23 @@
     <div id="programmer-weapons" class="container3">
         <h2 align="center">Programmer Weapons</h2><br>
         <div class="row">
-            <img src="/img/logo1.png" alt="Gambar 1">
-            <img src="/img/logo2.png" alt="Gambar 2">
+            <div class="column">
+                <img src="/img/logo1.png" alt="Gambar 1">
+            </div>
+            <div class="column">
+                <img src="/img/logo2.png" alt="Gambar 2">
+            </div>
         </div>
         <div class="row">
-            <img src="/img/logo3.png" alt="Gambar 3">
-            <img src="/img/logo4.png" alt="Gambar 4">
+            <div class="column">
+                <img src="/img/logo3.png" alt="Gambar 3">
+            </div>
+            <div class="column">
+                <img src="/img/logo4.png" alt="Gambar 4">
+            </div>
         </div><br><br>
     </div>
+    
     <div id="lesson-learned" class="box">
         <section>
             <h2>Lesson Learned</h2><hr><br>
@@ -113,7 +127,7 @@
 
 
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

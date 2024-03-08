@@ -68,23 +68,68 @@ nav ul li a:hover {
 
 }
 
-  /* Media query untuk layar kecil */
-  @media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column; /* Mengubah orientasi flex menjadi vertikal */
-      align-items: center; /* Menyatukan item menu ke tengah */
-      background-color: rgba(34, 34, 34, 0.7); /* Transparansi pada navigasi */
-    }
-  
-    nav ul {
-      margin-top: 10px; 
-    }
-  
-    nav ul li {
-      margin-left: 0px;
-      margin-right: 0px; /* Menghapus margin kanan pada item menu */
-    }
+/* Your existing styles */
+
+.burger-menu {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1500; /* Ensure burger menu is above the navbar */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #c1c1c1;
+  margin: 5px 0;
+  transition: transform 0.3s ease; /* Add transition for sliding effect */
+}
+
+.navbar-open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+      display: none;
   }
+  .burger-menu {
+      display: block;
+  }
+  .menu.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30%;
+      background-color: rgb(20, 20, 20);
+      padding: 70px 15px;
+      z-index: 1000;
+      transition: transform 0.3s ease; /* Add transition for sliding effect */
+      transform: translateX(0); /* Change to 0 to slide from right */
+  }
+  .menu.open ul {
+      flex-direction: column;
+  }
+  .menu.open li {
+      margin-bottom: 20px;
+  }
+  .menu.open li:last-child {
+      margin-bottom: 0;
+  }
+}
 
 .menu-container .isi {
   margin-left: 40px;
@@ -210,6 +255,13 @@ footer2 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .row img {
+    background-color: #564b7c60;
+    width: 150px;
+  }
 }
 
 footer {
