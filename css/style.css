@@ -139,6 +139,7 @@ nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  margin: 20px;
 }
 
 main {
@@ -174,6 +175,10 @@ h5 {
 
   .box.flexone {
     order: ; /* Mengubah urutan box menjadi pertama pada layar kecil */
+  }
+
+ .menu-container{
+  text-align: center;
   }
 }
 

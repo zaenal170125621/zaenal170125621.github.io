@@ -131,6 +131,22 @@ nav ul li a:hover {
   }
 }
   
+.git{
+  margin-top: 5px;
+  color: #efefef;
+}
+.git a{
+  text-decoration: none;
+  padding: 1px 5px;
+  color: rgb(27, 4, 132);
+  background-color: #efefef;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-shadow: none;
+}
 .container {
     position: relative;
     max-width: 800px;

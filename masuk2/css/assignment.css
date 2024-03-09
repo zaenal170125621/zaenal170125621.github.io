@@ -136,7 +136,7 @@
       height: 350;
       text-align: center;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: 30px;
     }
     
   
@@ -152,6 +152,7 @@
   
   label {
       font-weight: bold;
+      font-size: large;
   }
   
   input[type="text"],
@@ -190,14 +191,14 @@
 
 .email {
   flex: 1;
-  margin-left: 50px;
+  margin-left: 70px;
+  margin-right: 50px;
   max-width: calc(50% - 10px); /* Adjust margin */
   min-width: 270px;
 }
 
 .map {
   flex: 2;
-  margin-top: 20px;
 }
 
 /* For responsive layout */
@@ -213,9 +214,8 @@
 
     .map{
       margin-top: 100px;
-      align-items: center;
-      text-align: center;
-
+      margin-left: auto;
+      margin-right: auto;
     }
 
 }
