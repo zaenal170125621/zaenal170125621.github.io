@@ -196,8 +196,6 @@
 
 .map {
   flex: 2;
-    max-width: calc(50% - 10px); /* Adjust margin */
-    margin-top: 20px; /* Add some top margin */
 }
 
 /* For responsive layout */
@@ -212,8 +210,10 @@
     }
 
     .map{
-      margin: 0 auto;
       margin-top: 100px;
+      align-items: center;
+      text-align: center;
+
     }
 
 }
