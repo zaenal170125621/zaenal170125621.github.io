@@ -132,7 +132,7 @@
       
     .map {
       width: 100%; /* Mengatur lebar peta agar responsif */
-      max-width: 600px; /* Mengatur lebar maksimum peta */
+      max-width: 400px; /* Mengatur lebar maksimum peta */
       height: 350;
       text-align: center;
       margin-left: auto;
@@ -190,12 +190,14 @@
 
 .email {
   flex: 1;
-  margin-left: 30px;
-  max-width: calc(60% - 5px); /* Adjust margin */
+  margin-left: 50px;
+  max-width: calc(50% - 10px); /* Adjust margin */
+  min-width: 270px;
 }
 
 .map {
   flex: 2;
+  margin-top: 20px;
 }
 
 /* For responsive layout */
