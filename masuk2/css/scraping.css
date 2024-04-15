@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #111; /* Warna latar belakang gelap */
+  color: #fff; /* Warna teks putih */
+  margin-top: 60px;
+}
+  
+header {
+  position: fixed; /* Navbar menjadi lengket */
+  top: 0; /* Menempatkan navbar di bagian atas */
+  width: 100%; /* Navbar mengambil lebar penuh */
+  background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+  padding: 20px 0;
+  z-index: 1000; /* Menempatkan navbar di atas konten lain */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  margin: 0 2px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.7s ease;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+}
+
+nav ul li a:hover {
+  color: #1e1d1d;
+  background-color: #ebe5e5;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 118, 0.5);
+}
+
+.home {
+  color: rgb(18, 18, 255);
+  text-size-adjust: bold;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+
+}
+
+/* Your existing styles */
+
+.burger-menu {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1500; /* Ensure burger menu is above the navbar */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #c1c1c1;
+  margin: 5px 0;
+  transition: transform 0.3s ease; /* Add transition for sliding effect */
+}
+
+.navbar-open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+      display: none;
+  }
+  .burger-menu {
+      display: block;
+  }
+  .menu.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30%;
+      background-color: rgb(20, 20, 20);
+      padding: 70px 15px;
+      z-index: 1000;
+      transition: transform 0.3s ease; /* Add transition for sliding effect */
+      transform: translateX(0); /* Change to 0 to slide from right */
+  }
+  .menu.open ul {
+      flex-direction: column;
+  }
+  .menu.open li {
+      margin-bottom: 20px;
+  }
+  .menu.open li:last-child {
+      margin-bottom: 0;
+  }
+}
+
+/* Mengatur gaya untuk tombol */
+#update-button {
+    display: block; /* Mengubah tombol menjadi block agar properti margin dapat berfungsi */
+    margin: 0 auto; /* Mengatur margin otomatis di sisi kiri dan kanan untuk memusatkan tombol */
+    margin-bottom: 40px;
+    padding: 10px 20px; /* Padding tombol */
+    background-color: #3498db; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus batas */
+    border-radius: 5px; /* Membuat sudut tombol membulat */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+    font-size: 16px; /* Ukuran font tombol */
+}
+
+/* Tambahkan gaya untuk tabel */
+#data-table {
+    width: 80%; /* Mengatur lebar tabel menjadi 100% */
+    border-collapse: collapse; /* Menghapus jarak antara sel */
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font yang digunakan */
+}
+
+/* Gaya untuk header tabel */
+#data-table thead {
+    background-color: #2c3e50; /* Warna latar belakang header */
+    color: white; /* Warna teks header */
+}
+
+/* Gaya untuk header sel-sel tabel */
+#data-table thead th {
+    padding: 12px 15px; /* Padding sel header */
+    text-align: left; /* Teks rata kiri */
+    border-bottom: 2px solid #ecf0f1; /* Garis bawah yang kontras */
+}
+
+/* Gaya untuk sel-sel tabel */
+#data-table tbody td {
+    padding: 12px 15px; /* Padding sel tubuh tabel */
+    border-bottom: 1px solid #ecf0f1; /* Garis bawah sel */
+}
+
+/* Gaya untuk baris genap */
+#data-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5; /* Warna latar belakang baris genap */
+    color: black; /* Warna teks baris genap menjadi hitam */
+}
+
+/* Gaya untuk sel-sel tabel */
+#data-table td {
+    text-align: left; /* Teks rata kiri */
+}
+
+
+footer {
+    background-color: rgba(34, 34, 34, 1); /* Warna navbar dengan transparansi */
+    color: #fff;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Menyatukan teks ke tengah */
+    width: 100%; /* Sesuaikan lebar footer sesuai kebutuhan */
+  }
+  
+  .additional-links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .additional-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .additional-links ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .additional-links ul li a:hover {
+    color: #89771e;
+    text-decoration: none;
+  }
+  
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Pusatkan footer dengan margin otomatis */
+  }
+  
+  .contact-info ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Menyatukan teks ke tengah */
+  }
+  
+  .contact-info ul li {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: inline-block; /* Mengatur item kontak ke samping */
+    margin-right: 20px; /* Memberikan jarak antar item kontak */
+  }
+  
+  .contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .contact-info ul li a:hover {
+    color: #89771e;
+  }
+  
+  .logokontak {
+    margin-right: 10px;
+    width: 20px; /* Sesuaikan ukuran ikon kontak */
+    height: auto;
+  }
+  
+  .credit {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .container2 {
+      flex-direction: column;
+    }
+  }

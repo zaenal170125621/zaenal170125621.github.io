@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project| Zaenal</title>
+    <link rel="stylesheet" href="/masuk2/css/scraping.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h4>ZM</h4>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/masuk2/about.html">About</a></li>
+                <li><a href="/masuk2/subjek.html">Project</a></li>
+                <li><a href="/masuk2/files.html">Gallery</a></li>
+                <li class="home">Scraping</li>
+                <li><a href="/masuk2/assignment.html">Contact</a></li>
+                <li><a href="/load.html">Keluar</a></li>
+            </ul>
+            <div class="burger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header><br><br>
+    <h1 align="center">Hasil Scraping</h1>
+    <table id="data-table">
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Judul</th>
+            <th>Waktu Publish</th>
+            <th>Waktu Scraping</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="update-button">Perbarui Data</button>
+      <script>
+        // Load data from JSON file
+        function loadData() {
+          fetch('/scraping/data.json')
+            .then(response => response.json())
+            .then(data => {
+              // Create table rows
+              const tableBody = document.querySelector('#data-table tbody');
+              tableBody.innerHTML = '';
+              data.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                  <td>${item.kategori}</td>
+                  <td>${item.judul}</td>
+                  <td>${item.waktu_publish}</td>
+                  <td>${item.waktu_scraping}</td>
+                `;
+                tableBody.appendChild(row);
+              });
+            });
+        }
+        // Fungsi yang akan menampilkan pesan saat tombol ditekan
+        function showFeatureNotRunning() {
+            alert('Fitur belum berjalan');
+        }
+            // Update data button click event
+    document.querySelector('#update-button').addEventListener('click', () => {
+        // Panggil fungsi showFeatureNotRunning untuk menampilkan pesan
+        showFeatureNotRunning();
+    
+        // Tambahan lainnya sesuai kebutuhan Anda...
+    
+        // Atau jika ingin melakukan permintaan ke server:
+        // fetch('/scraping/scraping.py', { method: 'POST' })
+        //     .then(response => {
+        //         if (response.ok) {
+        //             // Reload the page to update data
+        //             location.reload();
+        //         } else {
+        //             console.error('Error executing Python script');
+        //         }
+        //     });
+    });
+        // Load data initially
+        loadData();
+      </script>
+
+    <footer align="center">
+        <div class="additional-links">
+            <ul>
+            <li>Kebijakan Privasi</li>
+            <li>Syarat dan Ketentuan</li>
+            <li>FAQ</li>
+            <!-- Tambahkan tautan tambahan lainnya -->
+            </ul>
+            <div class="contact-info">
+                <ul>
+                    <li><a href="https://github.com/zaenal170125621"><img src="/img/logo2.png" alt="GitHub" align="middle" class="logokontak"> zaenal170125621</a></li>
+                    <li><a href="mailto:zmuttakin000@gmail.com"><img src="/img/gmail.png" alt="Email" align="middle" class="logokontak"> zmuttakin000@gmail.com</a></li>
+                    <li><a href="https://instagram.com/_zzz404"><img src="/img/IG.png" alt="Instagram" align="middle" class="logokontak"> _zzz404</a></li>
+                    <li><a href="https://wa.me/6285939592558"><img src="/img/WA.png" alt="WhatsApp" align="middle" class="logokontak"> +6285939592558</a></li>
+                    <!-- tambahkan media sosial lainnya jika diperlukan -->
+                </ul>
+            </div><br>
+            <hr>
+            <p class="credit">&copy; 2024 Zaenal Muttakin</p>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>
