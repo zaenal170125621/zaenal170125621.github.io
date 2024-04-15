@@ -145,12 +145,14 @@ nav ul li a:hover {
 
 /* Tambahkan gaya untuk tabel */
 #data-table {
-    width: 80%; /* Mengatur lebar tabel menjadi 100% */
+    width: 90%; /* Mengatur lebar tabel menjadi 100% untuk responsif */
     border-collapse: collapse; /* Menghapus jarak antara sel */
-    margin-left: 40px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-left: auto; /* Margin otomatis untuk membuat tabel berada di tengah */
+    margin-right: auto; /* Margin otomatis untuk membuat tabel berada di tengah */
+    margin-bottom: 20px; /* Margin bawah */
+    margin-top: 20px; /* Margin atas */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Font yang digunakan */
+    overflow-x: auto; /* Menambahkan scrollbar horizontal jika diperlukan */
 }
 
 /* Gaya untuk header tabel */
